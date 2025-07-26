@@ -2,7 +2,7 @@
 <BlackmagicDesign>
     <Plugin>
         <Id>com.John.batch_rename_tracks</Id>
-        <Name>batch_rename_tracks</Name>
+        <Name>Batch Rename Tracks</Name>
         <Version>1.0.0</Version>
         <Description></Description>
         <FilePath>main.js</FilePath>

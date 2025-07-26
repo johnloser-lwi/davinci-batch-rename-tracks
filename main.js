@@ -157,7 +157,7 @@ async function setTrackName(event, trackType, index, name) {
 
     timeline = await getCurrentTimeline();
     if (timeline) {
-        return await timeline.SetTrackName("audio", 1, "test");
+        return await timeline.SetTrackName(trackType, Number(index), name);
     }
 
     return null;
@@ -172,8 +172,8 @@ function registerResolveEventHandlers() {
 
 const createWindow = () => {
     const win = new BrowserWindow ({
-        height: 300,
-        width: 500,
+        height: 500,
+        width: 800,
         useContentSize: true,
         show: false,
         icon: path.join(__dirname, 'img/logo.png'),
