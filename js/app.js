@@ -20,23 +20,25 @@ btn.addEventListener("click", async (e) => {
     const end = (() => {
         const endVal = Number(endIndex.value);
         return endVal <= trackCount ? endVal : trackCount;
-    })()
+    })();
 
     if (!addIncrementNumber) {
         const name = trackName ? trackName.value : "";
         for (let i = start; i <= end; i++) {
             await window.appAPI.setTrackName(trackTypeValue, i, name);
         }
-    } else {
-        let index = 1;
-        for (let i = start; i <= end; i++) {
-            const name = numberPosition.value == "before" ?
-                `${String(index).padStart(2, "0")}${trackName.value}` :
-                `${trackName.value}${String(index).padStart(2, "0")}`;
 
-            await window.appAPI.setTrackName(trackTypeValue, i, name);
-            index++;
-        }
+        return;
+    }
+
+    let index = 1;
+    for (let i = start; i <= end; i++) {
+        const name = numberPosition.value == "before" ?
+            `${String(index).padStart(2, "0")}${trackName.value}` :
+            `${trackName.value}${String(index).padStart(2, "0")}`;
+
+        await window.appAPI.setTrackName(trackTypeValue, i, name);
+        index++;
     }
 });
 
@@ -48,7 +50,7 @@ incrementNumber.addEventListener("click", () => {
     }
 });
 
-const toggleWarning = (e) => {
+const toggleWarning = () => {
     if (trackName.value != "") {
         btn.disabled = false;
         warning.classList.add("hide");
