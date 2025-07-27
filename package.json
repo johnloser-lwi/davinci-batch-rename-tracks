@@ -6,7 +6,7 @@
     "start": "electron ."
   },
   "keywords": [],
-  "author": "John",
+  "author": "John Yang",
   "license": "MIT",
-  "description": ""
+  "description": "Batch rename tracks for Davinci Resolve."
 }

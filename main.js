@@ -172,8 +172,8 @@ function registerResolveEventHandlers() {
 
 const createWindow = () => {
     const win = new BrowserWindow ({
-        height: 500,
-        width: 800,
+        height: 400,
+        width: 600,
         useContentSize: true,
         show: false,
         icon: path.join(__dirname, 'img/logo.png'),

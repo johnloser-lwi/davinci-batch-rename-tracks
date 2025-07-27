@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BlackmagicDesign>
     <Plugin>
-        <Id>com.John.batch_rename_tracks</Id>
+        <Id>com.johnyang.batch_rename_tracks</Id>
         <Name>Batch Rename Tracks</Name>
         <Version>1.0.0</Version>
         <Description></Description>
